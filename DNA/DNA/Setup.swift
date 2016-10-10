@@ -10,14 +10,19 @@ import UIKit
 
 class Setup: AnyObject {
     
+    let factory:DNAFactoryProtocol = DNAFactory()
+
     func SetupViewModel()
     {
-        let factory:DNAFactoryProtocol = DNAFactory()
-        
         factory.viewModelFactory.register(type: ViewModelType.Text.rawValue) { (data, factory) -> ViewModel in
             let viewModel = TextViewModel();
             viewModel.hidden = try? factory.bindingFactory.generate(data:data["Hidden"] as! [String:Any])
             viewModel.text = data["Text"] as? String
+            if let list = data["PlaceHolders"] as? [[String:Any]]
+            {
+                viewModel.placeHolders = factory.placeHolderFactory.generate(data: list)
+            }
+            
             return viewModel;
         }
         
@@ -55,4 +60,60 @@ class Setup: AnyObject {
             return viewModel;
         }
     }
+    
+    func SetupPlaceHolder()
+    {
+        factory.placeHolderFactory.register(type: PlaceHolderType.Text.rawValue) { (data, factory) -> PlaceHolderProtocol in
+            let placeHolder = TextPlaceHolder();
+            placeHolder.value = data["Value"] as? String
+            placeHolder.placeHolder = data["PlaceHolder"] as? String
+            //placeHolder.textStyle =
+            return placeHolder;
+        }
+        
+        factory.placeHolderFactory.register(type: PlaceHolderType.Binding.rawValue) { (data, factory) -> PlaceHolderProtocol in
+            let placeHolder = BindingPlaceHolder();
+            placeHolder.value = try? factory.bindingFactory.generate(data: data["Value"] as! [String:Any])
+            placeHolder.placeHolder = data["PlaceHolder"] as? String
+            //placeHolder.textStyle =
+            return placeHolder;
+        }
+    }
+    
+    func SetupValidation()
+    {
+        factory.valdationFactory.register(type: ValidationType.Length.rawValue) { (data, factory) -> ValidationProtocol in
+            let validation = LengthValidation();
+            
+            validation.max = data["Max"] as? Int
+            validation.min = data["Min"] as? Int
+            
+            return validation;
+        }
+        
+        factory.valdationFactory.register(type: ValidationType.Required.rawValue) { (data, factory) -> ValidationProtocol in
+            return RequiredValidation()
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

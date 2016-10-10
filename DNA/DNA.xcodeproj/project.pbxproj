@@ -19,6 +19,13 @@
 		70F15DD61DAB659F008FFF6D /* CompactSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DCD1DAB659F008FFF6D /* CompactSelectViewModel.swift */; };
 		70F15DD71DAB659F008FFF6D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DCE1DAB659F008FFF6D /* ViewModel.swift */; };
 		70F15DD81DAB659F008FFF6D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DCF1DAB659F008FFF6D /* ViewModelType.swift */; };
+		70F15DDB1DAB7233008FFF6D /* PlaceHolderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DDA1DAB7233008FFF6D /* PlaceHolderProtocol.swift */; };
+		70F15DDD1DAB72C3008FFF6D /* PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DDC1DAB72C3008FFF6D /* PlaceHolder.swift */; };
+		70F15DDF1DAB731E008FFF6D /* TextPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DDE1DAB731E008FFF6D /* TextPlaceHolder.swift */; };
+		70F15DE11DAB736D008FFF6D /* BindingPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DE01DAB736D008FFF6D /* BindingPlaceHolder.swift */; };
+		70F15DE31DAB75CE008FFF6D /* PlaceHolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DE21DAB75CE008FFF6D /* PlaceHolderType.swift */; };
+		70F15DE51DAB8557008FFF6D /* RequiredValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DE41DAB8557008FFF6D /* RequiredValidation.swift */; };
+		70F15DE71DAB89E6008FFF6D /* BindingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F15DE61DAB89E6008FFF6D /* BindingType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		70F15DCD1DAB659F008FFF6D /* CompactSelectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactSelectViewModel.swift; sourceTree = "<group>"; };
 		70F15DCE1DAB659F008FFF6D /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		70F15DCF1DAB659F008FFF6D /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		70F15DDA1DAB7233008FFF6D /* PlaceHolderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceHolderProtocol.swift; path = PlaceHolder/PlaceHolderProtocol.swift; sourceTree = "<group>"; };
+		70F15DDC1DAB72C3008FFF6D /* PlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceHolder.swift; path = PlaceHolder/PlaceHolder.swift; sourceTree = "<group>"; };
+		70F15DDE1DAB731E008FFF6D /* TextPlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextPlaceHolder.swift; path = PlaceHolder/TextPlaceHolder.swift; sourceTree = "<group>"; };
+		70F15DE01DAB736D008FFF6D /* BindingPlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BindingPlaceHolder.swift; path = PlaceHolder/BindingPlaceHolder.swift; sourceTree = "<group>"; };
+		70F15DE21DAB75CE008FFF6D /* PlaceHolderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceHolderType.swift; path = PlaceHolder/PlaceHolderType.swift; sourceTree = "<group>"; };
+		70F15DE41DAB8557008FFF6D /* RequiredValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidation.swift; sourceTree = "<group>"; };
+		70F15DE61DAB89E6008FFF6D /* BindingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +103,13 @@
 		70F15DAC1DAB653D008FFF6D /* DNA */ = {
 			isa = PBXGroup;
 			children = (
+				70F15DD91DAB71B1008FFF6D /* PlaceHolder */,
 				70F15DC41DAB659F008FFF6D /* Binding */,
+				70F15DC91DAB659F008FFF6D /* Validation */,
+				70F15DCC1DAB659F008FFF6D /* ViewModels */,
 				70F15DC61DAB659F008FFF6D /* DNAErrors.swift */,
 				70F15DC71DAB659F008FFF6D /* DNAFactory.swift */,
 				70F15DC81DAB659F008FFF6D /* Setup.swift */,
-				70F15DC91DAB659F008FFF6D /* Validation */,
-				70F15DCC1DAB659F008FFF6D /* ViewModels */,
 				70F15DAD1DAB653D008FFF6D /* DNA.h */,
 				70F15DAE1DAB653D008FFF6D /* Info.plist */,
 			);
@@ -114,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				70F15DC51DAB659F008FFF6D /* BindingProtocol.swift */,
+				70F15DE61DAB89E6008FFF6D /* BindingType.swift */,
 			);
 			path = Binding;
 			sourceTree = "<group>";
@@ -123,6 +139,7 @@
 			children = (
 				70F15DCA1DAB659F008FFF6D /* ValidationProtocol.swift */,
 				70F15DCB1DAB659F008FFF6D /* ValidationType.swift */,
+				70F15DE41DAB8557008FFF6D /* RequiredValidation.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -135,6 +152,18 @@
 				70F15DCF1DAB659F008FFF6D /* ViewModelType.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70F15DD91DAB71B1008FFF6D /* PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				70F15DDA1DAB7233008FFF6D /* PlaceHolderProtocol.swift */,
+				70F15DDC1DAB72C3008FFF6D /* PlaceHolder.swift */,
+				70F15DDE1DAB731E008FFF6D /* TextPlaceHolder.swift */,
+				70F15DE01DAB736D008FFF6D /* BindingPlaceHolder.swift */,
+				70F15DE21DAB75CE008FFF6D /* PlaceHolderType.swift */,
+			);
+			name = PlaceHolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +281,16 @@
 				70F15DD01DAB659F008FFF6D /* BindingProtocol.swift in Sources */,
 				70F15DD61DAB659F008FFF6D /* CompactSelectViewModel.swift in Sources */,
 				70F15DD21DAB659F008FFF6D /* DNAFactory.swift in Sources */,
+				70F15DE51DAB8557008FFF6D /* RequiredValidation.swift in Sources */,
+				70F15DE11DAB736D008FFF6D /* BindingPlaceHolder.swift in Sources */,
 				70F15DD31DAB659F008FFF6D /* Setup.swift in Sources */,
 				70F15DD51DAB659F008FFF6D /* ValidationType.swift in Sources */,
 				70F15DD71DAB659F008FFF6D /* ViewModel.swift in Sources */,
+				70F15DE71DAB89E6008FFF6D /* BindingType.swift in Sources */,
+				70F15DDD1DAB72C3008FFF6D /* PlaceHolder.swift in Sources */,
+				70F15DDF1DAB731E008FFF6D /* TextPlaceHolder.swift in Sources */,
+				70F15DDB1DAB7233008FFF6D /* PlaceHolderProtocol.swift in Sources */,
+				70F15DE31DAB75CE008FFF6D /* PlaceHolderType.swift in Sources */,
 				70F15DD41DAB659F008FFF6D /* ValidationProtocol.swift in Sources */,
 				70F15DD81DAB659F008FFF6D /* ViewModelType.swift in Sources */,
 			);

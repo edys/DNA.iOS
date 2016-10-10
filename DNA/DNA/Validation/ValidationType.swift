@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ValdationType : Int
+enum ValidationType : Int
 {
     case Required = 0
     case Length = 1
