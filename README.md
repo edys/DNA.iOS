@@ -1,4 +1,4 @@
-# Helix.iOS
+# DNA.iOS
 
 At the moment there seems to only be two type of mobile apps...
 
@@ -20,7 +20,7 @@ key resources = images, text (cached on each platform when approperite)
 The end idea is to create a eco system of common building blocks that can be used to quickly create new flows that have a consistent look and feel. 
 
 This project will consist of:
- - Helix.RestServices
- - Helix.Web
- - Helix.Android
- - Helix.iOS
+ - DNA.RestServices
+ - DNA.Web
+ - DNA.Android
+ - DNA.iOS
