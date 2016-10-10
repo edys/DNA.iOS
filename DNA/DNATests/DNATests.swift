@@ -1,15 +1,15 @@
 //
-//  iOSTests.swift
-//  iOSTests
+//  DNATests.swift
+//  DNATests
 //
-//  Created by Rhys Walden on 10/10/16.
-//
+//  Created by DATACOM on 10/10/16.
+//  Copyright © 2016 DATACOM. All rights reserved.
 //
 
 import XCTest
-@testable import iOS
+@testable import DNA
 
-class iOSTests: XCTestCase {
+class DNATests: XCTestCase {
     
     override func setUp() {
         super.setUp()
